@@ -1,0 +1,20 @@
+name: ShellScript_Test
+
+on:
+  push:
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Permission Setting
+        run: chmod +x gcd.sh test_gcd.sh
+
+      - name: Test Run
+        run: ./test_gcd.sh
+
